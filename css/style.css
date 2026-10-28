@@ -1,0 +1,39 @@
+body {
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.about {
+    width: 100%;
+    padding: 100px 60px;
+    background: linear-gradient(180deg, #000000 0%, #212121 100%);
+    color: white;
+}
+
+.about__title {
+    font-weight: bold;
+    font-size: 48px;
+    max-width: 900px;
+}
+
+.about__first {
+    display: flex;
+    max-height: 300px;
+    font-size: 36px;
+    font-weight: 100;
+}
+
+.about__first p {
+    max-width: 655px;
+    text-align: justify;
+}
+
+.about__first img {
+    max-width: 450px;
+}
+
+.about__line {
+    width: 3px;
+    max-height: 300px;
+    margin: 0 67px;
+    background: white;
+}
