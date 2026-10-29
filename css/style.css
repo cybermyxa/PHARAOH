@@ -1,44 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Instrument Sans", sans-serif;
-    color: white;
     margin: 0;
+    color: white;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .about {
     width: 100%;
-    padding: 100px 60px;
-    background: linear-gradient(180deg, #000000 0%, #212121 100%);
-    color: white;
+    padding: clamp(1rem, 2vw, 2rem) clamp(0.75rem, 2vw, 1.5rem) clamp(2rem, 4vw, 4rem);
+    background: linear-gradient(180deg, #000000 0%, #202020 100%);
 }
 
-.about__title {
-    font-weight: bold;
-    font-size: 48px;
-    max-width: 900px;
+.about__inner {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    align-items: center;
+    column-gap: clamp(1.5rem, 4vw, 4.25rem);
+    width: 100%;
+    min-height: clamp(45rem, 71.3vw, 77rem);
+    margin: 0 auto;
+    padding: clamp(2.25rem, 4.2vw, 4.5rem) clamp(2rem, 4vw, 4.25rem) clamp(3.75rem, 5vw, 5.375rem);
+    overflow: hidden;
 }
 
-.about__first {
-    display: flex;
-    max-height: 300px;
-    font-size: 36px;
-    font-weight: 100;
+.about__inner::after {
+    position: absolute;
+    z-index: 2;
+    right: 4%;
+    bottom: 8%;
+    left: 4%;
+    height: 0.0625rem;
+    background: rgba(255, 255, 255, 0.72);
+    content: "";
 }
 
-.about__first p {
-    max-width: 655px;
+.about__inner::before {
+    position: absolute;
+    z-index: -1;
+    top: 6%;
+    bottom: 8%;
+    left: 0;
+    width: 12%;
+    opacity: 0.9;
+    background: url("../image/name-pharaoh.png") left center / contain no-repeat;
+    content: "";
+}
+
+.about__background-word {
+    display: none;
+}
+
+.about__portrait {
+    position: relative;
+    z-index: 1;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    display: block;
+    width: 112%;
+    max-height: 92%;
+    margin-left: -6%;
+    object-fit: contain;
+    object-position: center bottom;
+    filter: grayscale(1) contrast(1.08);
+}
+
+.about__content {
+    position: relative;
+    z-index: 2;
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+}
+
+.about__title p,
+.about__copy p,
+.about__ddynasty p {
+    margin: 0;
+}
+
+.title__who {
+    font-size: clamp(2.125rem, 4vw, 4.25rem);
+    font-weight: 750;
+    line-height: 1.05;
+}
+
+.title__pharaoh {
+    margin-top: 0.5rem !important;
+    font-size: clamp(3.625rem, 6.2vw, 6.625rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.title__subtitle {
+    margin-top: 0.75rem !important;
+    font-size: clamp(1.1875rem, 2.2vw, 2.3125rem);
+    font-weight: 750;
+    line-height: 1.1;
+}
+
+.about__copy {
+    display: grid;
+    gap: clamp(0.875rem, 1.5vw, 1.625rem);
+    margin-top: clamp(1.125rem, 2vw, 2.125rem);
+    font-size: clamp(1.125rem, 1.8vw, 1.9375rem);
+    line-height: 1.28;
+}
+
+.about__copy p:first-child {
+    max-width: 96%;
+    padding-left: 1.125rem;
+    border-left: 0.0625rem solid #aaa;
+}
+
+.about__copy p:nth-child(2) {
+    padding-right: 1.125rem;
+    border-right: 0.0625rem solid #aaa;
     text-align: justify;
 }
 
-.about__first img {
-    max-width: 450px;
+.about__ddynasty {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: clamp(7.375rem, 13vw, 13.75rem);
+    margin-top: clamp(1rem, 2vw, 2.125rem);
+    border-top: 0.0625rem solid #888;
+    border-bottom: 0.0625rem solid #888;
+    text-align: center;
 }
 
-.about__line {
-    width: 3px;
-    max-height: 300px;
-    margin: 0 67px;
-    background: white;
+.about__ddynasty-mark {
+    grid-row: span 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    border-right: 0.0625rem solid #888;
+    background: url("../image/dead-dynasty.png") center / auto 75% no-repeat;
+    font-size: 0;
 }
+
+.about__legacy-name,
+.about__legacy-years {
+    font-size: clamp(1.25rem, 2vw, 2.125rem);
+    line-height: 1.15;
+    letter-spacing: 0.035em;
+}
+
+.about__legacy-years {
+    margin-top: -0.75rem !important;
+}
+
+/* @media (max-width: 48rem) {
+    .about__inner {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: auto;
+        row-gap: 1.5rem;
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .about__inner::before {
+        top: 0.5rem;
+        bottom: auto;
+        width: 4.5rem;
+        height: 55%;
+    }
+
+    .about__portrait {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+        width: min(78%, 22.5rem);
+        max-height: 28rem;
+        margin: 0;
+    }
+
+    .about__content {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .title__who {
+        font-size: clamp(1.875rem, 8vw, 2.875rem);
+    }
+
+    .title__pharaoh {
+        font-size: clamp(3.375rem, 13vw, 4.75rem);
+    }
+
+    .title__subtitle {
+        font-size: clamp(1.125rem, 5vw, 1.5625rem);
+    }
+
+    .about__copy {
+        font-size: clamp(1.0625rem, 4.5vw, 1.3125rem);
+    }
+
+    .about__ddynasty {
+        min-height: 7rem;
+    }
+
+    .about__ddynasty-mark {
+        min-height: 7rem;
+        background-size: auto 72%;
+    }
+
+    .about__legacy-name,
+    .about__legacy-years {
+        font-size: clamp(1.0625rem, 4.5vw, 1.375rem);
+    }
+} */
+ 
 
 .clips {
     padding: 60px 100px 0;
