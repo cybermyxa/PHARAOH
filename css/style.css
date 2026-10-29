@@ -1,11 +1,10 @@
 body {
   margin: 0;
-  padding: 0;
 }
 
 .color-box {
   background-color: #171921;
-  height: 100px;
+  max-height: 110px;
 }
 
 .header-content {
@@ -17,6 +16,12 @@ body {
   padding: 15px 0 5px 0;
 }
 
+.header-title {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: auto;
+    margin: 0;
+}
 
 .screen {
   display: grid;
