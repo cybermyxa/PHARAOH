@@ -41,7 +41,7 @@ body {
 }
 
 .clips {
-    padding: 60px 100px;
+    padding: 60px 100px 0;
     height: auto;
     background: linear-gradient(180deg, #000000 0%, #212121 100%);
 }
