@@ -1,35 +1,37 @@
-let phosphor = document.getElementById('phosphor')
-let modalWindowPhosphor = document.getElementById('modalWindowPhosphor') 
+const modalOverlay = document.querySelector('.albums__modals');
+const phosphorModal = document.getElementById('phosphor');
+const phuneralModal = document.getElementById('phuneral');
+const pinkPhloydModal = document.getElementById('pinkPhloyd');
 
-phosphor.addEventListener('click', ()=>{
-    modalWindowPhosphor.style.display = 'block'
-})
 
-window.addEventListener('click', ()=>{
-    if (event.target === modalWindowPhosphor) {
-    modalWindowPhosphor.style.display = "none"
-}})
+document.getElementById('btnPhosphor').addEventListener('click', () => {
+    modalOverlay.classList.add('is-open');
+    phosphorModal.classList.add('is-active');
+});
 
-let phuneral = document.getElementById('phuneral')
-let modalWindowPhuneral = document.getElementById('modalWindowPhuneral') 
+document.getElementById('btnPhuneral').addEventListener('click', () => {
+    modalOverlay.classList.add('is-open');
+    phuneralModal.classList.add('is-active');
+});
 
-phuneral.addEventListener('click', ()=>{
-    modalWindowPhuneral.style.display = 'block'
-})
+document.getElementById('btnPinkPhloyd').addEventListener('click', () => {
+    modalOverlay.classList.add('is-open');
+    pinkPhloydModal.classList.add('is-active');
+});
 
-window.addEventListener('click', ()=>{
-    if (event.target === modalWindowPhuneral) {
-    modalWindowPhuneral.style.display = "none"
-}})
+function closeModals() {
+    modalOverlay.classList.remove('is-open');
+    phosphorModal.classList.remove('is-active');
+    phuneralModal.classList.remove('is-active');
+    pinkPhloydModal.classList.remove('is-active');
+}
 
-let pinkPhloyd = document.getElementById('pinkPhloyd')
-let modalWindowPinkPhloyd = document.getElementById('modalWindowPinkPhloyd') 
+document.querySelectorAll('.modals__close').forEach((button) => {
+    button.addEventListener('click', closeModals);
+});
 
-pinkPhloyd.addEventListener('click', ()=>{
-    modalWindowPinkPhloyd.style.display = 'block'
-})
-
-window.addEventListener('click', ()=>{
-    if (event.target === modalWindowPinkPhloyd) {
-    modalWindowPinkPhloyd.style.display = "none"
-}})
+modalOverlay.addEventListener('click', (event) => {
+    if (event.target === modalOverlay) {
+        closeModals();
+    }
+});
