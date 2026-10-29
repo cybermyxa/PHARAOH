@@ -11,6 +11,11 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>PHARAOH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 
@@ -42,6 +47,105 @@
             </div>
         </div>
 
+    </section>
+
+    <section class="albums">
+        <div class="albums__modals">
+            <div class="modals__window eye-phosphor" id="phosphor" role="dialog" aria-modal="true" aria-labelledby="phosphor-title" tabindex="-1">
+                <button class="modals__close" type="button" aria-label="Закрыть окно">×</button>
+                <img src="../image/phosphor.png" alt="Обложка альбома PHOSPHOR">
+                <div class="modals__content">
+                    <p id="phosphor-title">Где хотите прослушать альбом?</p>
+                    <div class="albums__music-platform">
+                        <div class="music-platform__object"><a href="https://open.spotify.com/album/4zo2ZTMFIOKSmnDOI3LGEM"><img src="../image/spotify.png" alt="Spotify"></a></div>
+                        <div class="music-platform__object"><a href="https://soundcloud.com/deaddynastyph/sets/phosphor"><img src="../image/soundcloud.png" alt="SoundCloud"></a></div>
+                        <div class="music-platform__object"><a href="https://music.yandex.ru/album/3633571"><img src="../image/yandex.png" alt="Яндекс Музыка"></a></div>
+                        <div class="music-platform__object"><a href="https://music.apple.com/ru/album/phosphor/1135431444"><img src="../image/apple.png" alt="Apple Music"></a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modals__window eye-phuneral" id="phuneral" role="dialog" aria-modal="true" aria-labelledby="phuneral-title" tabindex="-1">
+                <button class="modals__close" type="button" aria-label="Закрыть окно">×</button>
+                <img src="../image/phuneral.png" alt="Обложка альбома PHUNERAL">
+                <div class="modals__content">
+                    <p id="phuneral-title">Где хотите прослушать альбом?</p>
+                    <div class="albums__music-platform">
+                        <div class="music-platform__object"><a href="https://open.spotify.com/album/41Y2U2Oy92XK8xSN7gXmoE"><img src="../image/spotify.png" alt="Spotify"></a></div>
+                        <div class="music-platform__object"><a href="https://soundcloud.com/deaddynastyph/sets/phuneral"><img src="../image/soundcloud.png" alt="SoundCloud"></a></div>
+                        <div class="music-platform__object"><a href="https://music.yandex.ru/album/5675354"><img src="../image/yandex.png" alt="Яндекс Музыка"></a></div>
+                        <div class="music-platform__object"><a href="https://music.apple.com/ru/album/phuneral/1431700427"><img src="../image/apple.png" alt="Apple Music"></a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modals__window eye-pink-phloyd" id="pinkPhloyd" role="dialog" aria-modal="true" aria-labelledby="pink-phloyd-title" tabindex="-1">
+                <button class="modals__close" type="button" aria-label="Закрыть окно">×</button>
+                <img src="../image/pink_phloyd.png" alt="Обложка альбома PINK PHLOYD">
+                <div class="modals__content">
+                    <p id="pink-phloyd-title">Где хотите прослушать альбом?</p>
+                    <div class="albums__music-platform">
+                        <div class="music-platform__object"><a href="https://open.spotify.com/album/7DTn18bcFCNls94EyPfmFe"><img src="../image/spotify.png" alt="Spotify"></a></div>
+                        <div class="music-platform__object"><a href="https://soundcloud.com/deaddynastyph/sets/pink-phloyd"><img src="../image/soundcloud.png" alt="SoundCloud"></a></div>
+                        <div class="music-platform__object"><a href="https://music.yandex.ru/album/4525060"><img src="../image/yandex.png" alt="Яндекс Музыка"></a></div>
+                        <div class="music-platform__object"><a href="https://music.apple.com/ru/album/pink-phloyd/1257008616"><img src="../image/apple.png" alt="Apple Music"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="albums__title">
+            <p>ЛЕГЕНДАРНЫЕ<br>АЛЬБОМЫ PHARAOH</p>
+        </div>
+
+        <div class="albums__main">
+            <div class="albums__object">
+                <img src="../image/phosphor.png" alt="">
+                <p>PHOSPHOR</p>
+                <div class="albums__button">
+                    <button id="btnPhosphor" data-modal-target="phosphor">Послушать альбом</button>
+                </div>
+            </div>
+
+            <div class="albums__object">
+                <img src="../image/phuneral.png" alt="">
+                <p>PHUNERAL</p>
+                <div class="albums__button">
+                    <button id="btnPhuneral" data-modal-target="phuneral">Послушать альбом</button>
+                </div>
+            </div>
+
+            <div class="albums__object">
+                <img src="../image/pink_phloyd.png" alt="">
+                <p>PINK PHLOYD</p>
+                <div class="albums__button">
+                    <button id="btnPinkPhloyd" data-modal-target="pinkPhloyd">Послушать альбом</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="albums__music-platform">
+            <div class="music-platform__object">
+                <a href="https://open.spotify.com/artist/1F8usyx5PbYGWxf0bwdXwA">
+                    <img src="../image/spotify.png" alt="">
+                </a>
+            </div>
+            <div class="music-platform__object">
+                <a href="https://soundcloud.com/deaddynastyph">
+                    <img src="../image/soundcloud.png" alt="">
+                </a>
+            </div>
+            <div class="music-platform__object">
+                <a href="https://music.yandex.ru/artist/4443004">
+                    <img src="../image/yandex.png" alt="">
+                </a>
+            </div>
+            <div class="music-platform__object">
+                <a href="https://music.apple.com/ru/artist/pharaoh/1077538316">
+                    <img src="../image/apple.png" alt="">
+                </a>
+            </div>
+        </div>
     </section>
     
     <section class="clips">
@@ -111,7 +215,11 @@
             </div>
         </footer>
     </section>
+
+
+    <script src="../js/java.js"></script>
 </body>
 
 
 </html>
+
