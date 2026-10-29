@@ -1,5 +1,7 @@
 body {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: "Instrument Sans", sans-serif;
+    color: white;
+    margin: 0;
 }
 
 .about {
@@ -36,4 +38,80 @@ body {
     max-height: 300px;
     margin: 0 67px;
     background: white;
+}
+
+.clips {
+    padding: 60px 100px;
+    height: auto;
+    background: linear-gradient(180deg, #000000 0%, #212121 100%);
+}
+
+.clips__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 118px;
+    gap: 32px;
+}
+
+.clips__title p {
+    margin: 0;
+    font-size: 48px;
+    line-height: auto;
+    font-weight: bold;
+}
+
+.clips__title img {
+    max-width: 252px;
+    max-height: 118px;
+}
+
+.clips__all {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.clips__all p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.clips__youtube {
+    margin-bottom: 10px;
+    max-height: 338px;
+}
+
+.clips__youtube iframe {
+    border-radius: 10px;
+}
+
+.author {
+    font-size: 24px;
+    margin: 0;
+}
+
+.clips__info {
+    padding: 20px;
+    background: #1A1A1A;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+.clips__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    font-size: 24px;
+    font-weight: medium;
+    gap: 10px;
+}
+
+.clips__next img {
+    max-width: 20px;
+    max-height: 20px;
 }
